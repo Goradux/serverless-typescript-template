@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "moduleResolution": "Bundler",
+    "sourceMap": true,
+    "target": "ES2020",
+    "strict": true
+  },
+  "include": ["src/**/*.ts"],
+}

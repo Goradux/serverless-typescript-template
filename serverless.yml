@@ -1,0 +1,25 @@
+service: serverless-typescript-template
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: eu-west-1
+  stage: ${opt:stage}
+  logRetentionInDays: 180
+  versionFunctions: false
+  timeout: 30
+  environment:
+    STAGE: ${self:provider.stage}
+
+custom:
+  prefix: ${self:service}-${self:provider.stage}
+  customVariable1: Hello, World!
+
+functions: ${file(./resources/functions.yml)}
+
+resources:
+  - ${file(./resources/function-roles.yml)}

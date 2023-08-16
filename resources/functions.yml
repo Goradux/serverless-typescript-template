@@ -1,0 +1,21 @@
+# Serverless Framework specific syntax
+
+Function1:
+  handler: ./src/lambda1.handler # works to point to TypeScript, because Esbuild will compile it for us
+  role: FunctionRole
+  events:
+    - httpApi:
+        path: /api/Function1
+        method: GET
+  environment:
+    CUSTOM_VAR: ${self:custom.customVariable1}
+
+Function2:
+  handler: ./src/lambda2.handler
+  role: FunctionRole # use the same role
+  timeout: 10 # override global setting
+  memorySize: 2048 # override default 512 Mb
+  events:
+    - schedule:
+        rate: cron(0 12 * * ? *)
+        enabled: true

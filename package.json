@@ -1,0 +1,25 @@
+{
+  "name": "sls-ts-aws",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A minimal example of Node 18 + TypeScript + Serverless Framework + AWS",
+  "scripts": {
+    "test": "glob -c \"node --loader tsx --test\" \"./src/**/*.test.ts\"",
+    "start:Function1": "sls invoke local -f Function1 -s dev",
+    "start:api": "serverless offline -s dev",
+    "deploy:dev": "sls deploy -s dev"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@serverless/typescript": "^3.30.1",
+    "@types/aws-lambda": "^8.10.119",
+    "@types/node": "^18.0.0",
+    "esbuild": "^0.17.19",
+    "serverless": "^3.34.0",
+    "serverless-esbuild": "^1.46.0",
+    "serverless-offline": "^12.0.4",
+    "typescript": "^5.1.6",
+    "tsx": "^3.12.7",
+    "glob": "^10.3.3"
+  }
+}
