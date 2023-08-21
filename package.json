@@ -7,19 +7,25 @@
     "test": "glob -c \"node --loader tsx --test\" \"./src/**/*.test.ts\"",
     "invoke:Function1": "sls invoke local -f Function1 -s dev",
     "start:api": "serverless offline -s dev",
-    "deploy:dev": "sls deploy -s dev"
+    "deploy:dev": "sls deploy -s dev",
+    "lint": "eslint --ext .ts --fix .",
+    "prettier": "prettier --write --ignore-unknown ."
   },
-  "dependencies": {},
   "devDependencies": {
     "@serverless/typescript": "^3.30.1",
     "@types/aws-lambda": "^8.10.119",
     "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
     "esbuild": "^0.17.19",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "glob": "^10.3.3",
+    "prettier": "^3.0.2",
     "serverless": "^3.34.0",
     "serverless-esbuild": "^1.46.0",
     "serverless-offline": "^12.0.4",
-    "typescript": "^5.1.6",
     "tsx": "^3.12.7",
-    "glob": "^10.3.3"
+    "typescript": "^5.1.6"
   }
 }

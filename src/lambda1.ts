@@ -7,7 +7,7 @@ import type {
 
 export const handler: Handler = async (
   _event: APIGatewayProxyEventV2,
-  _context: Context
+  _context: Context,
 ): Promise<APIGatewayProxyStructuredResultV2> => {
   console.log("Hello, Lambda 1!");
 
