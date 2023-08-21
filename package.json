@@ -5,7 +5,7 @@
   "description": "A minimal example of Node 18 + TypeScript + Serverless Framework + AWS",
   "scripts": {
     "test": "glob -c \"node --loader tsx --test\" \"./src/**/*.test.ts\"",
-    "start:Function1": "sls invoke local -f Function1 -s dev",
+    "invoke:Function1": "sls invoke local -f Function1 -s dev",
     "start:api": "serverless offline -s dev",
     "deploy:dev": "sls deploy -s dev"
   },

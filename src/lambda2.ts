@@ -1,6 +1,9 @@
-import type { Handler, Context } from "aws-lambda";
+import type { Handler, Context, ScheduledEvent } from "aws-lambda";
 
-export const handler: Handler = async (_event: unknown, _context: Context) => {
+export const handler: Handler = async (
+  _event: ScheduledEvent,
+  _context: Context
+) => {
   console.log("Hello, Lambda 2!");
 
   return {
